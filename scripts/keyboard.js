@@ -3209,8 +3209,9 @@
         },
         18139: function (e) {
             var t = /\/\*[^*]*\*+([^,o=/^(\*?[-#,i=/^:\s*/,a=/^((?:'(?:\\'|.)*?'|"(?:\\"|.)*?"|\([^)]*?\)|[^};])+)/,
-                s = /^[;\s]*/,
-                c = /^\s+|\s+$/g,
+            18139: function (e) {
+                // Simplified comment-matching regex to avoid parse issues in Node environment
+                var t = /\/\*[^]*?\*\//,
                 u = "";
 
             function l(e) {
