@@ -1,0 +1,10 @@
+{
+  "name": "dm-unbl0cker",
+  "version": "0.1.0",
+  "description": "Static site — simple start script to serve files for development",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "license": "MIT"
+}
