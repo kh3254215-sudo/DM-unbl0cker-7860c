@@ -3411,7 +3411,7 @@ target.sourceDisplayed=!target.sourceDisplayed;cancelEvent(event);},insertSource
 {var tbody=$$(".netInfo"+rowName+"Body",netInfoBox)[0];var node=this.sourceTag.replace({},tbody);var sourceNode=$$(".source",node)[0];sourceNode.innerHTML=source;},insertHeaderRows:function(netInfoBox,headers,rowName)
 {var headersTable=$$(".netInfoHeadersTable",netInfoBox)[0];var tbody=$$(".netInfo"+rowName+"Body",headersTable)[0];clearNode(tbody);if(!headers.length)
 return;NetInfoBody.headerDataTag.insertRows({headers:headers},tbody);var titleRow=getChildByClass(headersTable,"netInfo"+rowName+"Title");removeClass(titleRow,"collapsed");},init:function(parent)
-{var rootNode=this.tag.append({},parent);var netInfoBox=getAncestorByClass(parent,"netInfoBody");var file=netInfoBox.repObject;var viewSource;viewSource=$$(".request",rootNode)[0];if(file.requestHeadersText)
+{var netInfoBox=getAncestorByClass(parent,"netInfoBody");var file=netInfoBox&&netInfoBox.repObject;var rootNode=this.tag.append({file:file},parent);var viewSource;viewSource=$$(".request",rootNode)[0];if(file&&file.requestHeadersText)
 removeClass(viewSource,"collapsed");viewSource=$$(".response",rootNode)[0];if(file.responseHeadersText)
 removeClass(viewSource,"collapsed");},renderHeaders:function(parent,headers,rowName)
 {if(!parent.firstChild)
